@@ -1,17 +1,27 @@
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "eventquant-backtesting"
+name = "EventQuant-Backtesting"
 version = "0.1.0"
 description = "Backtesting helpers for the EventQuant Kalshi markets API."
 readme = { file = "sdk/README.md", content-type = "text/markdown" }
 requires-python = ">=3.9"
-dependencies = ["requests>=2.31"]
-license = { text = "Proprietary" }
-authors = [{ name = "EventQuant" }]
-keywords = ["kalshi", "markets", "backtesting", "candlesticks", "eventquant"]
+
+dependencies = [
+  "requests>=2.31",
+]
+
+license = { text = "GPL-3.0-or-later" }
+
+authors = [
+  { name = "EventQuant" },
+]
+
+keywords = [
+  "kalshi",
+  "markets",
+  "backtesting",
+  "candlesticks",
+  "eventquant",
+]
 
 [project.optional-dependencies]
 ml = [
@@ -20,10 +30,14 @@ ml = [
   "scikit-learn>=1.2",
   "torch>=2.0",
 ]
-dev = ["build>=1.2.1", "twine>=5.0.0"]
+dev = [
+  "build>=1.2.1",
+  "twine>=5.0.0",
+]
 
 [project.urls]
 Homepage = "https://www.api.eventquant.com"
+Source = "https://github.com/dasante78/EventQuant-Backtesting"
 
 [tool.setuptools.packages.find]
 where = ["."]
